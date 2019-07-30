@@ -1,0 +1,87 @@
+  <div class="container">
+    <ul class="list-unstyled">
+      <% @houses.each do |house| %>
+      <li class="media">
+        <img src="https://img17.shop-pro.jp/PA01273/059/product/134931945_th.jpg?cmsp_timestamp=20180908164923" class="m-3" style="width: 250px; height: auto;" alt="...">
+        <div class="media-body">
+          <h5 class="p-3"><%= house.name %></h5>
+          <table class="table">
+            <tbody>
+              <tr>
+                <th scope="row">場所</th>
+                <td><%= house.address %></td>
+              </tr>
+              <tr>
+                <th scope="row">アクセス</th>
+                <td><%= house.access %></td>
+              </tr>
+              <tr>
+                <th scope="row">家賃</th>
+                <td>10万円</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </li>
+      <% end %>
+      
+      <li class="media">
+        <img src="https://www.hng.ne.jp/corpImg/114/case114-2_01S.jpg" class="m-3" style="width: 250px; height: auto;" alt="...">
+        <div class="media-body">
+          <h5 class="p-3">物件2</h5>
+          <table class="table">
+            <tbody>
+              <tr>
+                <th scope="row">場所</th>
+                <td>東京都杉並区阿佐ヶ谷南 5-3-10</td>
+              </tr>
+              <tr>
+                <th scope="row">アクセス</th>
+                <td>ＪＲ阿佐ヶ谷駅 徒歩10分</td>
+              </tr>
+              <tr>
+                <th scope="row">家賃</th>
+                <td>6.2万円</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </li>
+      
+      <li class="media">
+        <img src="https://image.jimcdn.com/app/cms/image/transf/none/path/s1d11230f68ef1d16/image/i1d4f8ac95e484c3b/version/1360987433/%E3%82%AE%E3%82%B6%E3%81%AE%E4%B8%89%E5%A4%A7%E3%83%94%E3%83%A9%E3%83%9F%E3%83%83%E3%83%89%E3%81%A8%E7%8E%8B%E5%A6%83%E3%81%AE%E3%83%94%E3%83%A9%E3%83%9F%E3%83%83%E3%83%89.jpg" class="m-3" style="width: 250px; height: auto;" alt="...">
+        <div class="media-body">
+          <h5 class="p-3">物件3</h5>
+          <table class="table">
+            <tbody>
+              <tr>
+                <th scope="row">場所</th>
+                <td>カイロ</td>
+              </tr>
+              <tr>
+                <th scope="row">アクセス</th>
+                <td>ＪＲ山手線 カイロ駅 徒歩30分</td>
+              </tr>
+              <tr>
+                <th scope="row">家賃</th>
+                <td>100万円</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </li>
+</div>
+
+<nav aria-label="Page navigation example">
+  <ul class="pagination justify-content-center">
+    <li class="page-item disabled">
+      <a class="page-link" href="#" tabindex="-1" aria-disabled="true">前へ</a>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item">
+      <a class="page-link" href="#">次へ</a>
+    </li>
+  </ul>
+</nav>

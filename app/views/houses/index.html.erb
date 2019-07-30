@@ -1,18 +1,19 @@
   <div class="container">
     <ul class="list-unstyled">
+      <% @houses.each do |house| %>
       <li class="media">
         <img src="https://img17.shop-pro.jp/PA01273/059/product/134931945_th.jpg?cmsp_timestamp=20180908164923" class="m-3" style="width: 250px; height: auto;" alt="...">
         <div class="media-body">
-          <h5 class="p-3">物件1</h5>
+          <h5 class="p-3"><%= house.name %></h5>
           <table class="table">
             <tbody>
               <tr>
                 <th scope="row">場所</th>
-                <td>東京都荒川区西日暮里 1丁目59-20</td>
+                <td><%= house.address %></td>
               </tr>
               <tr>
                 <th scope="row">アクセス</th>
-                <td>ＪＲ山手線 西日暮里駅 徒歩7分</td>
+                <td><%= house.access %></td>
               </tr>
               <tr>
                 <th scope="row">家賃</th>
@@ -22,6 +23,7 @@
           </table>
         </div>
       </li>
+      <% end %>
       
       <li class="media">
         <img src="https://www.hng.ne.jp/corpImg/114/case114-2_01S.jpg" class="m-3" style="width: 250px; height: auto;" alt="...">

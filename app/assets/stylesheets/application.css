@@ -13,8 +13,3 @@
  *= require_tree .
  *= require_self
  */
- 
- .media {
-  border: 1px solid #ddd;
-  margin: 30px;
-}

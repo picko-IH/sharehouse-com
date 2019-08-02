@@ -8,11 +8,11 @@
 if House.count == 0
   10.times do
     House.create(
-      name: "クランテラス 品川",
-      address: "品川区大井4丁目",
-      access: "JR京浜東北線 大井町駅 徒歩9分",
-      description: "入居者様にとっての暮らしやすさ、居心地の良さとは何か、を追求しクランテラス品川を設計いたしました。お部屋の天井高は3ｍを確保し、どのお部屋も明るく新生活をスタートするにはピッタリのお家となっております。当社ならではの空間づくりをぜひご覧下さい！",
-      gender_type: "male"
+      name: "ハウス名",
+      address: "住所",
+      access: "アクセス",
+      description: "説明",
+      gender_type: "男女"
     )
   end
 end

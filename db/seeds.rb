@@ -5,9 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-if House.count == 0
+if Houses.count == 0
   10.times do
-    House.create(
+    Houses.create(
       name: "ハウス名",
       address: "住所",
       access: "アクセス",

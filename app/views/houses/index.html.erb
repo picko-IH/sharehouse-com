@@ -1,55 +1,29 @@
-<!doctype html>
-<html lang="ja">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="./style.css">
-
-    <title>(仮)ShareHouseドットコム</title>
-  </head>
-
-  <body>
-    <div class="container pt-3 pb-3">
-      <button type="button" class="btn btn-primary float-right">ログイン</button>
-      
-        <h1>
-          (仮)ShareHouseドットコム
-        </h1>
-        
-        <div class = "text-right">
-          新規会員登録もこちら
+  <div class="container">
+    <ul class="list-unstyled">
+      <% @houses.each do |house| %>
+      <li class="media">
+        <img src="https://img17.shop-pro.jp/PA01273/059/product/134931945_th.jpg?cmsp_timestamp=20180908164923" class="m-3" style="width: 250px; height: auto;" alt="...">
+        <div class="media-body">
+          <h5 class="p-3"><%= link_to house.name, house_path(house) %></h5>
+          <table class="table">
+            <tbody>
+              <tr>
+                <th scope="row">場所</th>
+                <td><%= house.address %></td>
+              </tr>
+              <tr>
+                <th scope="row">アクセス</th>
+                <td><%= house.access %></td>
+              </tr>
+              <tr>
+                <th scope="row">家賃</th>
+                <td>10万円</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
-    </div>
-    <div class="container">
-      <ul class="list-unstyled">
-        <% @houses.each do |house| %>
-        <li class="media">
-          <img src="https://img17.shop-pro.jp/PA01273/059/product/134931945_th.jpg?cmsp_timestamp=20180908164923" class="m-3" style="width: 250px; height: auto;" alt="...">
-          <div class="media-body">
-            <h5 class="p-3"><%= house.name %></h5>
-            <table class="table">
-              <tbody>
-                <tr>
-                  <th scope="row">場所</th>
-                  <td><%= house.address %></td>
-                </tr>
-                <tr>
-                  <th scope="row">アクセス</th>
-                  <td><%= house.access %></td>
-                </tr>
-                <tr>
-                  <th scope="row">家賃</th>
-                  <td>10万円</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </li>
-        <% end %>
+      </li>
+      <% end %>
   
   <nav aria-label="Page navigation example">
     <ul class="pagination justify-content-center">

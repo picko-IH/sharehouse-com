@@ -5,6 +5,6 @@ class HousesController < ApplicationController
   
   def show
     @house = House.find(params[:id])
-    @rooms = @house.rooms
+    @room = @house.rooms
   end
 end

@@ -16,3 +16,12 @@ if House.count == 0
     )
   end
 end
+
+if room.count == 0
+  10.times do
+    room.create(
+      house_id: "2",
+      name: "部屋名",
+    )
+  end
+end

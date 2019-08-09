@@ -25,18 +25,18 @@
       <tbody>
         <tr>
           <th scope="row">場所</th>
-          <td>東京都荒川区西日暮里 1丁目59-20</td>
+          <td><%= house.address %></td>
         </tr>
         <tr>
           <th scope="row">条件</th>
           <td>男性, 女性 (男女共有 / 15世帯)</td>
         </tr>
         <tr>
-          <th scope="row">部屋A</th>
+          <th scope="row"><%= room.name %></th>
           <td>空室/満室</td>
         </tr>
         <tr>
-          <th scope="row">部屋B</th>
+          <th scope="row"><%= room.name %></th>
           <td>空室/満室</td>
         </tr>
       </tbody>
@@ -62,7 +62,7 @@
       </div>
         
       <div class="media-body">
-        <h5 class="p-3">部屋A</h5>
+        <h5 class="p-3"><%= room.name %></h5>
           <table class="table">
             <tbody>
               <tr>
@@ -110,7 +110,7 @@
       </div>
         
       <div class="media-body">
-        <h5 class="p-3">部屋B</h5>
+        <h5 class="p-3"><%= room.name %></h5>
           <table class="table">
             <tbody>
               <tr>

@@ -14,10 +14,15 @@
         description: "説明",
         gender_type: "男女"
       )
-      10.times do
+      10.times do |i|
         Room.create(
           house_id: house.id,
           name: "部屋名",
+          rent: (i + 1) * 10000,
+          service_fee: 3000,
+          other_fee: 0,
+          tatami_size: i + 6,
+          condition: "清掃業者(週1回程度)",
         )
       end
     end

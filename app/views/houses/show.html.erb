@@ -68,23 +68,19 @@
               <tbody>
                 <tr>
                   <th scope="row">家賃</th>
-                  <td>５万</td>
+                  <td><%= room.rent %></td>
                   <th scope="row">広さ</th>
-                  <td>7.5畳</td>
+                  <td><%= room.tatami_size %></td>
                 </tr>
                 <tr>
                   <th scope="row">共益費</th>
-                  <td>３千円</td>
+                  <td><%= room.service_fee %></td>
                   <th scope="row">条件</th>
-                  <td>男性</td>
+                  <td><%= room.condition %></td>
                 </tr>
                 <tr>
                   <th scope="row">その他費用</th>
-                  <td>なし</td>
-                  <th scope="row"></th>
-                  <td>清掃業者(週1回程度)</td>
-                </tr>
-                <tr>
+                  <td><%= room.other_fee %></td>
                   <th scope="row">連絡先</th>
                   <td>XXX-XXXX-XXXX</td>
                 </tr>

@@ -7,4 +7,8 @@ class HousesController < ApplicationController
     @house = House.find(params[:id])
     @rooms = @house.rooms
   end
+  
+  def search
+    @houses = House.all
+  end
 end

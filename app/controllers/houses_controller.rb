@@ -1,6 +1,9 @@
 class HousesController < ApplicationController
   def index
-    @houses = House.all
+    rooms = Room.all
+    rooms = rooms.where('rent >= ?', params[:min_rent]) if params[:min_rent].present?
+    rooms = rooms.where('rent <= ?', params[:max_rent]) if params[:max_rent].present?
+    @houses = House.where(id: rooms.pluck(:house_id).uniq)
   end
   
   def show

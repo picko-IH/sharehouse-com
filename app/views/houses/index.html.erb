@@ -1,3 +1,105 @@
+<div class="container">
+  <%= form_tag houses_path, method: 'get' do %>
+  <h5 class>家賃</h5>
+    <div class="row">
+      <div class="col-3">
+        <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref" name="min_rent">
+          <option value="25000" selected>25000円</option>
+          <option value="26000">26000円</option>
+          <option value="27000">27000円</option>
+          <option value="28000">28000円</option>
+        </select>
+      </div>
+      <div class="col-1"><label class="my-1 mr-2" for="inlineFormCustomSelectPref">~</label></div>
+      <div class="col-3">
+        <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref" name="max_rent">
+          <option value="110000" selected>110000円</option>
+          <option value="26000">26000円</option>
+          <option value="27000">27000円</option>
+          <option value="28000">28000円</option>
+        </select>
+    </div>
+  </div> 
+  
+  <div class="media-body">
+   <h5 class="p-2">条件</h5>
+      <table class="table">
+        <tbody>
+          <tr>
+            <th scope="row">性別</th>
+            <td>
+              <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+                <option selected>性別を選択</option>
+                <option value="1">男性専用</option>
+                <option value="2">女性専用</option>
+                <option value="3">男性多め</option>
+                <option value="4">女性多め</option>
+              </select>
+            </td>
+            <th scope="row">タイプ</th>
+            <td>
+              <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+                <option selected>部屋のタイプを選択</option>
+                <option value="1">個室</option>
+                <option value="2">ドミトリー</option>
+                <option value="3">ルームシェア</option>
+              </select>
+            </td>
+            <th scope="row">空き状況</th>
+            <td>
+              <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+                <option selected>部屋の空き状況を選択</option>
+                <option value="1">空き</option>
+                <option value="2">空室予定</option>
+                <option value="3">満室</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">職種</th>
+            <td>
+              <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+                <option selected>職種を選択</option>
+                <option value="1">学生</option>
+                <option value="2">事務職</option>
+                <option value="3">営業</option>
+                <option value="3">企画</option>
+                <option value="3">エンジニア</option>
+                <option value="3">公務員</option>
+              </select>
+            </td>
+            <th scope="row">年代</th>
+            <td>
+              <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+                <option selected>年代を選択</option>
+                <option value="1">10代多め</option>
+                <option value="2">20代多め</option>
+                <option value="3">30代多め</option>
+                <option value="4">40代多め</option>
+                <option value="5">50代多め</option>
+                <option value="6">60代多め</option>
+              </select>
+            </td>
+            <th scope="row">その他</th>
+            <td>
+              <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+                <option selected>その他を選択</option>
+                <option value="1">駅近</option>
+                <option value="2">家賃安め</option>
+                <option value="3">住人少なめ</option>
+              </select>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="clearfix">
+      <button type="submit" class="btn btn-primary float-right">検索</button>
+    </div>
+  </div>
+  <% end %>
+</div>
+
+
   <div class="container">
     <ul class="list-unstyled">
       <% @houses.each do |house| %>

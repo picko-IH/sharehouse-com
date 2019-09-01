@@ -5,7 +5,7 @@ class CreateHouses < ActiveRecord::Migration[5.0]
       t.string :address
       t.string :access
       t.text :description
-      t.string :gender_type
+      t.integer :gender_type
 
       t.timestamps
     end

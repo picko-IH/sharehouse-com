@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 20190810014706) do
     t.string   "address"
     t.string   "access"
     t.text     "description", limit: 65535
-    t.string   "gender_type"
+    t.integer  "gender_type"
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
   end

@@ -6,13 +6,13 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
   if House.count == 0
-    10.times do
+    10.times do |i|
       house = House.create(
-        name: "ハウス名",
+        name: "ハウス名#{i}",
         address: "住所",
         access: "アクセス",
         description: "説明",
-        gender_type: "男女"
+        gender_type: i % 3 + 1
       )
       10.times do |i|
         Room.create(

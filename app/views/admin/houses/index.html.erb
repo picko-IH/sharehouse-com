@@ -1,0 +1,24 @@
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">name</th>
+      <th scope="col">address</th>
+      <th scope="col">access</th>
+      <th scope="col">description</th>
+      <th scope="col">gender_type</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @houses.each do |house| %>
+    <tr>
+      <th scope="row"><%= house.id %></th>
+      <td><%= house.name %></td>
+      <td><%= house.address %></td>
+      <td><%= house.access %></td>
+      <td><%= house.description %></td>
+      <td><%= house.gender_type %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>

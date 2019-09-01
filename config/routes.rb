@@ -4,5 +4,10 @@ Rails.application.routes.draw do
   get '/houses', to: 'houses#index'
   get '/houses/:id', to: 'houses#show'
   
+  namespace :admin do
+    resources :houses
+  end
+
+  
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

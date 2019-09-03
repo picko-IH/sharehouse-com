@@ -12,6 +12,7 @@
       <th scope="col">access</th>
       <th scope="col">description</th>
       <th scope="col">gender_type</th>
+      <th scope="col">物件の編集</th>
     </tr>
   </thead>
   <tbody>
@@ -23,6 +24,8 @@
       <td><%= house.access %></td>
       <td><%= house.description %></td>
       <td><%= house.gender_type %></td>
+      <td><a href="new"><button type="button" class="btn btn-primary">編集</button></a>
+  </div></td>
     </tr>
     <% end %>
   </tbody>

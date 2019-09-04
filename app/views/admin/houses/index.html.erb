@@ -13,6 +13,7 @@
       <th scope="col">description</th>
       <th scope="col">gender_type</th>
       <th scope="col">物件の編集</th>
+      <th scope="col">削除</th>
     </tr>
   </thead>
   <tbody>
@@ -27,6 +28,11 @@
       <td>
         <%= link_to edit_admin_house_path(house.id) do %>
           <button type="button" class="btn btn-primary">編集</button>
+        <% end %> 
+      </td>
+      <td>
+        <%= link_to admin_house_path(house.id), method: :delete, data: { confirm: '本当に削除しますか?' } do %>
+          <button type="button" class="btn btn-danger">削除</button>
         <% end %> 
       </td>
     </tr>

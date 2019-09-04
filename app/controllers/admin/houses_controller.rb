@@ -29,6 +29,13 @@ class Admin::HousesController < ApplicationController
       render 'edit'
     end
   end
+  
+  def destroy
+    @house = House.find(params[:id])
+    if @house.destroy
+      redirect_to admin_houses_path, notice: "削除しました。"
+    end
+  end
 
   private
     # Rails4からStrongParamaterと呼ばれる機能が追加されました。

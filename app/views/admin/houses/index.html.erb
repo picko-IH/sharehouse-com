@@ -24,8 +24,11 @@
       <td><%= house.access %></td>
       <td><%= house.description %></td>
       <td><%= house.gender_type %></td>
-      <td><a href="new"><button type="button" class="btn btn-primary">編集</button></a>
-  </div></td>
+      <td>
+        <%= link_to edit_admin_house_path(house.id) do %>
+          <button type="button" class="btn btn-primary">編集</button>
+        <% end %> 
+      </td>
     </tr>
     <% end %>
   </tbody>

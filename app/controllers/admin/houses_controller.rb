@@ -16,6 +16,19 @@ class Admin::HousesController < ApplicationController
       render 'new'
     end
   end
+  
+  def edit
+    @house = House.find(params[:id])
+  end
+  
+  def update
+    @house = House.find(params[:id])
+    if @house.update(house_params)
+      redirect_to admin_houses_path, notice: "編集しました。"
+    else
+      render 'edit'
+    end
+  end
 
   private
     # Rails4からStrongParamaterと呼ばれる機能が追加されました。

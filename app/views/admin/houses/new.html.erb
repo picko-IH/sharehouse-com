@@ -22,6 +22,10 @@
     <%= f.label :gender_type, "性別" %>
     <%= f.select :gender_type, House.gender_types.keys.to_a, {} %>
   </div>
+  <div class="field pt-3 pb-3">
+    <%= f.label :images, "画像" %>
+    <%= f.file_field :images, multiple: true %>
+  </div>
   
   <div class="actions ">
     <%= f.submit "登録する" %>

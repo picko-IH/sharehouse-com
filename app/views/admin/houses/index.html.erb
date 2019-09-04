@@ -1,6 +1,8 @@
 <div class="container pt-3 pb-3">
   <div class="mb-3">
-  <a href="new"><button type="button" class="btn btn-primary">新規登録</button></a>
+    <%= link_to new_admin_house_path do %>
+      <button type="button" class="btn btn-primary">新規登録</button>
+    <% end %> 
   </div>
   
 <table class="table">
@@ -12,6 +14,7 @@
       <th scope="col">access</th>
       <th scope="col">description</th>
       <th scope="col">gender_type</th>
+      <th scope="col">images</th>
       <th scope="col">物件の編集</th>
       <th scope="col">削除</th>
     </tr>
@@ -25,6 +28,11 @@
       <td><%= house.access %></td>
       <td><%= house.description %></td>
       <td><%= house.gender_type %></td>
+      <td>
+        <% house.images.each do |image| %>
+          <%= image_tag image.to_s, width: "100px" %>
+        <% end %>
+      </td>
       <td>
         <%= link_to edit_admin_house_path(house.id) do %>
           <button type="button" class="btn btn-primary">編集</button>

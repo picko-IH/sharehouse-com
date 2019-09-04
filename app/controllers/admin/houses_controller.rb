@@ -41,6 +41,6 @@ class Admin::HousesController < ApplicationController
     # Rails4からStrongParamaterと呼ばれる機能が追加されました。
     # セキュリティのため、permitメソッドで許可したパラメータ名しか取得できません。
     def house_params
-      params.require(:house).permit(:name, :address, :access, :description, :gender_type)
+      params.require(:house).permit(:name, :address, :access, :description, :gender_type, {images: []})
     end
 end

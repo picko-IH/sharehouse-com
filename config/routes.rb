@@ -5,7 +5,9 @@ Rails.application.routes.draw do
   get '/houses/:id', to: 'houses#show'
   
   namespace :admin do
-    resources :houses
+    resources :houses do
+      resources :rooms
+    end
   end
 
   

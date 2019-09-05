@@ -3,11 +3,11 @@ class Admin::HousesController < ApplicationController
   def index
     @houses = House.all
   end
-  
+
   def new
     @house = House.new
   end
-  
+
   def create
     @house = House.new(house_params)
     if @house.save
@@ -19,6 +19,7 @@ class Admin::HousesController < ApplicationController
   
   def edit
     @house = House.find(params[:id])
+    @room = Room.find(params[:id])
   end
   
   def update

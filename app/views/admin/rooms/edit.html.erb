@@ -1,0 +1,30 @@
+<%= form_for @house, url: admin_house_path(@house) do |f| %>
+
+<div class="container mx-auto" style="width: 200px;">
+  <div class="field pt-3 pb-3">
+    <%= f.label :name, "名前" %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field pt-3 pb-3">
+    <%= f.label :address, "住所" %>
+    <%= f.text_field :address %>
+  </div>
+  <div class="field pt-3 pb-3">
+    <%= f.label :access, "アクセス" %>
+    <%= f.text_field :access %>
+  </div>
+  <div class="field pt-3 pb-3">
+    <%= f.label :description, "説明" %>
+    <%= f.text_field :description %>
+  </div>
+  <div class="field pt-3 pb-3">
+    <%= f.label :gender_type, "性別" %>
+    <%= f.select :gender_type, House.gender_types.keys.to_a, {} %>
+  </div>
+  
+  <div class="actions ">
+    <%= f.submit "登録する" %>
+  </div>
+ </div>
+<% end %>

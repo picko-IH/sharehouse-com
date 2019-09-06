@@ -2,10 +2,12 @@ class Admin::HousesController < ApplicationController
   layout 'admin'
   def index
     @houses = House.all
+    @rooms = Room.all
   end
 
   def new
     @house = House.new
+    @room = Room.new
   end
 
   def create
@@ -19,7 +21,7 @@ class Admin::HousesController < ApplicationController
   
   def edit
     @house = House.find(params[:id])
-    @room = Room.find(params[:id])
+    @room = House.find(params[:id])
   end
   
   def update

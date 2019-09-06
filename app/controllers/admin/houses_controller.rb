@@ -17,11 +17,18 @@ class Admin::HousesController < ApplicationController
     else
       render 'new'
     end
+    
+    @room = Room.new(house_params)
+    if @room.save
+      redirect_to admin_house_rooms_path, notice: "物件登録しました。"
+    else
+      render 'new'
+    end
   end
   
   def edit
     @house = House.find(params[:id])
-    @room = House.find(params[:id])
+    @room = Room.find(params[:id])
   end
   
   def update

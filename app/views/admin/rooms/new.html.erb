@@ -1,26 +1,32 @@
-<%= form_for @house, url: admin_houses_path do |f| %>
+<%= form_for @house, url: admin_house_rooms_path do |f| %>
+  <div class="container mx-auto" style="width: 200px;">
+    <div class="field pt-3 pb-3">
+      <%= f.label :name, "物件名" %>
+      <%= f.text_field :name %>
+    </div>
+<% end %>
 
-<div class="container mx-auto" style="width: 200px;">
+  <%= form_for @room, url: admin_house_rooms_path do |f| %>
   <div class="field pt-3 pb-3">
-    <%= f.label :name, "名前" %>
+    <%= f.label :name, "部屋名" %>
     <%= f.text_field :name %>
   </div>
 
   <div class="field pt-3 pb-3">
-    <%= f.label :address, "住所" %>
-    <%= f.text_field :address %>
+    <%= f.label :rent, "家賃" %>
+    <%= f.text_field :rent %>
   </div>
   <div class="field pt-3 pb-3">
-    <%= f.label :access, "アクセス" %>
-    <%= f.text_field :access %>
+    <%= f.label :service_fee, "共益費" %>
+    <%= f.text_field :service_fee %>
   </div>
   <div class="field pt-3 pb-3">
-    <%= f.label :description, "説明" %>
-    <%= f.text_field :description %>
+    <%= f.label :other_fee, "その他費用" %>
+    <%= f.text_field :other_fee %>
   </div>
   <div class="field pt-3 pb-3">
-    <%= f.label :gender_type, "性別" %>
-    <%= f.select :gender_type, House.gender_types.keys.to_a, {} %>
+    <%= f.label :tatami_size, "性別" %>
+    <%= f.text_field :tatami_size %>
   </div>
   <div class="field pt-3 pb-3">
     <%= f.label :images, "画像" %>

@@ -9,38 +9,40 @@
   <thead class="thead-dark">
     <tr>
       <th scope="col">#</th>
+      <th scope="col">物件名</th>
       <th scope="col">name</th>
-      <th scope="col">address</th>
-      <th scope="col">access</th>
-      <th scope="col">description</th>
-      <th scope="col">gender_type</th>
-      <th scope="col">images</th>
-      <th scope="col">物件の編集</th>
-      <th scope="col">削除</th>
+      <th scope="col">rent</th>
+      <th scope="col">service_fee</th>
+      <th scope="col">other_fee</th>
+      <th scope="col">tatami_size</th>
+      <th scope="col">condition</th>
       <th scope="col">部屋の編集</th>
+      <th scope="col">削除</th>
     </tr>
   </thead>
   <tbody>
-    <% @houses.each do |house| %>
+    <% @rooms.each do |room| %>
     <tr>
-      <th scope="row"><%= house.id %></th>
-      <td><%= house.name %></td>
-      <td><%= house.address %></td>
-      <td><%= house.access %></td>
-      <td><%= house.description %></td>
-      <td><%= house.gender_type %></td>
+      <th scope="row"><%= room.id %></th>
+      <td><%= house.name %></td>要確認
+      <td><%= room.name %></td>
+      <td><%= room.rent %></td>
+      <td><%= room.service_fee %></td>
+      <td><%= room.other_fee %></td>
+      <td><%= room.tatami_size %></td>
+      <td><%= room.condition %></td>
       <td>
-        <% house.images.each do |image| %>
+        <% room.images.each do |image| %>
           <%= image_tag image.to_s, width: "100px" %>
         <% end %>
       </td>
       <td>
-        <%= link_to edit_admin_house_path(house.id) do %>
+        <%= link_to edit_admin_house_room_path(room.id) do %>
           <button type="button" class="btn btn-primary">編集</button>
         <% end %> 
       </td>
       <td>
-        <%= link_to admin_house_path(house.id), method: :delete, data: { confirm: '本当に削除しますか?' } do %>
+        <%= link_to admin_house_room_path(house.id), method: :delete, data: { confirm: '本当に削除しますか?' } do %>
           <button type="button" class="btn btn-danger">削除</button>
         <% end %> 
       </td>

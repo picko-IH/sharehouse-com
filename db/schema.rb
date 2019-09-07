@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190904110243) do
+ActiveRecord::Schema.define(version: 20190907014602) do
 
   create_table "houses", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(version: 20190904110243) do
     t.integer  "other_fee"
     t.float    "tatami_size", limit: 24
     t.string   "condition"
+    t.json     "images"
   end
 
 end

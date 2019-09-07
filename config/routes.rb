@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   resources :houses, only: %i[index show]
   root to: 'houses#index'
   get '/houses', to: 'houses#index'

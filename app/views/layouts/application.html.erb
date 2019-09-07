@@ -12,15 +12,25 @@
     
   <body>
     <div class="container pt-3 pb-3">
-      <button type="button" class="btn btn-primary float-right">ログイン</button>
+      <% if user_signed_in? %>
+        <%= link_to destroy_user_session_path, method: :delete, class: 'post nav-item nav-link' do %>
+          <button type="button" class="btn btn-primary float-right">ログアウト</button>
+        <% end %>
       
+      <% else %>
+        <%= link_to new_user_session_path, class: 'post nav-item nav-link' do %>
+          <button type="button" class="btn btn-primary float-right">ログイン</button>
+        <% end %>
+      <% end %>
         <h1>
           (仮)ShareHouseドットコム
         </h1>
         
-        <div class = "text-right">
-          新規会員登録もこちら
-        </div>
+        <% unless user_signed_in? %>
+          <div class = "text-right">
+            新規会員登録も<%= link_to "こちら", new_user_registration_path %>
+          </div>
+        <% end %>
     </div>
     
     <%= yield %>

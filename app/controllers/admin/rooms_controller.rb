@@ -1,6 +1,6 @@
-class Admin::RoomsController < ApplicationController
+class Admin::RoomsController < Admin::ApplicationController
   before_action :set_house
-  layout 'admin'
+
   def index
     @rooms = @house.rooms
   end

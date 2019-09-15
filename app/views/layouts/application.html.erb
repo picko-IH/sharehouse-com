@@ -28,7 +28,13 @@
         
         <% unless user_signed_in? %>
           <div class = "text-right">
-            新規会員登録も<%= link_to "こちら", new_user_registration_path %>
+            新規会員登録<%= link_to "こちら", new_user_registration_path %>
+          </div>
+        <% end %>
+        
+         <% if current_user.present? && current_user.admin? %>
+          <div class = "text-right">
+            オーナーの方は<%= link_to "こちら", admin_houses_path %>
           </div>
         <% end %>
     </div>

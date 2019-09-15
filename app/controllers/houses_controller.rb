@@ -15,4 +15,5 @@ class HousesController < ApplicationController
   def search
     @houses = House.all
   end
+  
 end

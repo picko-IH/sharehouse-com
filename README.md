@@ -7,7 +7,7 @@ URL https://sharehouse.tk/
 
 テストユーザ
 
-    ユーザ名：test
+    ユーザ名(Email)：test@test
     パスワード：P@ssw0rd
 
 # ■サービスで使用されている技術/機能一覧
